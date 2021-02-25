@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Spinner from '../../partials/Spinner';
 import SuccessAlert from '../../partials/SuccessAlert';
 import ErrorAlert from '../../partials/ErrorAlert';
 
-class Form extends React.Component
+class Form extends Component
 {
     constructor(props)
     {

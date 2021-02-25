@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deleteCategory } from '../../../store/actions/CategoryActions';
 
-class Row extends React.Component {
+class Row extends Component {
 
     constructor(props)
     {
@@ -15,7 +15,7 @@ class Row extends React.Component {
     handleDelete(e) {
         e.preventDefault();
 
-        if(confirm("Are you sure?")) {
+        if(confirm("Voulez-vous vraiment supprimer?")) {
             this.props.deleteCategory(this.props.category.id);
         }
     }
@@ -33,7 +33,7 @@ class Row extends React.Component {
                     <Link to={'/categories/edit/' + this.props.category.id} className="btn btn-info btn-sm"><i
                         className="fa fa-edit"></i></Link>
                     <a href="#" className="btn btn-danger btn-sm" onClick={this.handleDelete}><i
-                        className="fa fa-remove"></i></a>
+                        className="fas fa-trash"></i></a>
                 </td>
             </tr>
         )

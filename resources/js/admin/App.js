@@ -6,6 +6,12 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
+//redux
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk'
+import rootReducer from './store/reducers/RootReducer';
+
 //  Partials
 import Header from './components/partials/Header';
 import Sidebar from './components/partials/Sidebar';
@@ -14,19 +20,22 @@ import Footer from './components/partials/Footer';
 //  Partials
 import Routes from './Routes';
 
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+
 class App extends Component {
     render() {
         return (
-          <Router>
-          <div className="wrapper">
-            <Header/>
-            <Sidebar/>
-            <Routes/>
-            <SidebarContent/>
-            <Footer/>
-          </div>
-          </Router>
-
+        <Provider store={store}>
+            <Router>
+              <div className="wrapper">
+                  <Header/>
+                  <Sidebar/>
+                  <Routes/>
+                  <SidebarContent/>
+                  <Footer/>
+              </div>
+            </Router>
+        </Provider>
         );
     }
 }
