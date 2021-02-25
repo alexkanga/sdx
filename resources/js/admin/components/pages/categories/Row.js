@@ -23,17 +23,33 @@ class Row extends Component {
     render()
     {
         return (
+
+
             <tr>
-                <td>{this.props.category.id}</td>
-                <td>{this.props.category.title}</td>
+                <td>
+                    {this.props.category.id}
+                </td>
+                <td>
+                    {this.props.category.title}
+                </td>
                 <td>
                     {this.props.category.slug}
                 </td>
+
                 <td>
-                    <Link to={'/categories/edit/' + this.props.category.id} className="btn btn-info btn-sm"><i
-                        className="fa fa-edit"></i></Link>
-                    <a href="#" className="btn btn-danger btn-sm" onClick={this.handleDelete}><i
-                        className="fas fa-trash"></i></a>
+                    
+                    <Link to={'/categories/edit/' + this.props.category.id} className="btn btn-info btn-sm">
+                        <i className="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </Link>
+
+                    <a className="btn btn-danger btn-sm" onClick={this.handleDelete}>
+                        <i className="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+
                 </td>
             </tr>
         )
