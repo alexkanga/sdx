@@ -36,7 +36,7 @@ class Row extends Component {
                     {this.props.category.slug}
                 </td>
 
-                <td>
+                <td className="float-right">
 
                     <Link to={'/categories/edit/' + this.props.category.id} className="btn btn-info btn-sm">
                         <i className="fas fa-pencil-alt">
@@ -44,7 +44,7 @@ class Row extends Component {
                         Editer
                     </Link>
 
-                    <a className="btn btn-danger btn-sm" onClick={this.handleDelete}>
+                    <a href="#" className="btn btn-danger btn-sm" onClick={this.handleDelete}>
                         <i className="fas fa-trash">
                         </i>
                         Supprimer

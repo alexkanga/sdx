@@ -62,7 +62,7 @@ class TagsController extends Controller
 
         $tag->save();
 
-        return response()->json(['data' => $tag, 'message' => 'Created successfully'], 201);
+        return response()->json(['data' => $tag, 'message' => 'Création effectuée avec succès'], 201);
     }
 
     /**
@@ -112,7 +112,7 @@ class TagsController extends Controller
 
         $tag->save();
 
-        return response()->json(['data' => $tag, 'message' => 'Updated successfully'], 200);
+        return response()->json(['data' => $tag, 'message' => 'Mise à jour effectuée avec succès'], 200);
     }
 
     /**
@@ -131,6 +131,6 @@ class TagsController extends Controller
 
         $tag->delete();
 
-        return response()->json(['message' => 'Deleted successfully'], 200);
+        return response()->json(['message' => 'Suppression effectuée avec succès'], 200);
     }
 }

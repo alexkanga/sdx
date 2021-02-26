@@ -19,10 +19,10 @@ class Form extends React.Component
                 <SuccessAlert msg={this.props.tag.success_message}/>
                 <ErrorAlert msg={this.props.tag.error_message}/>
 
-                <div className="box-body">
+                <div>
                     <div className={`form-group ${this.props.tag.validation_errors!=null?'has-error':''}`}>
-                        <label>Tag title</label>
-                        <input type="text" className="form-control" placeholder="Tag title" onChange={this.props.onchange} value={this.props.tag.tag.title?this.props.tag.tag.title:''} name="title" />
+                        <label htmlFor="titre">Titre</label>
+                        <input type="text" id="titre" className="form-control" placeholder="Libellé du tag" onChange={this.props.onchange} value={this.props.tag.tag.title?this.props.tag.tag.title:''} name="title" />
                         {
                             this.props.tag.validation_errors!=null?(<div className="help-block">{this.props.tag.validation_errors.title[0]}</div>):null
                         }

@@ -100,11 +100,6 @@ class Add extends Component
               </form>
             </section>
 
-
-
-
-
-
         </div>
         );
     }

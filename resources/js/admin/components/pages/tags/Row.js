@@ -15,7 +15,7 @@ class Row extends React.Component {
     handleDelete(e) {
         e.preventDefault();
 
-        if(confirm("Are you sure?")) {
+        if(confirm("Voulez-vous vraiment supprimer?")) {
             this.props.deleteTag(this.props.tag.id);
         }
     }
@@ -23,14 +23,30 @@ class Row extends React.Component {
     render()
     {
         return (
+
             <tr>
-                <td>{this.props.tag.id}</td>
-                <td>{this.props.tag.title}</td>
                 <td>
-                    <Link to={'/tags/edit/' + this.props.tag.id} className="btn btn-info btn-sm"><i
-                        className="fa fa-edit"></i></Link>
-                    <a href="#" className="btn btn-danger btn-sm" onClick={this.handleDelete}><i
-                        className="fa fa-remove"></i></a>
+                    {this.props.tag.id}
+                </td>
+                <td>
+                    {this.props.tag.title}
+                </td>
+
+
+                <td className="float-right">
+
+                    <Link to={'/tags/edit/' + this.props.tag.id} className="btn btn-info btn-sm">
+                        <i className="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </Link>
+
+                    <a href="#" className="btn btn-danger btn-sm" onClick={this.handleDelete}>
+                        <i className="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+
                 </td>
             </tr>
         )
