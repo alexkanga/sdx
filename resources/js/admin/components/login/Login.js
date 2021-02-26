@@ -118,7 +118,7 @@ class Login extends Component
           <div className="col-7">
             <div className="icheck-primary">
               <input type="checkbox" id="remember" />
-              <label for="remember">
+              <label htmlfor="remember">
                 Mémoriser
               </label>
             </div>

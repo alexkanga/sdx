@@ -65,7 +65,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return response()->json(['data' => $category, 'message' => 'Created successfully'], 201);
+        return response()->json(['data' => $category, 'message' => 'Création effectuée avec succès'], 201);
     }
 
     /**
@@ -117,7 +117,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return response()->json(['data' => $category, 'message' => 'Updated successfully'], 200);
+        return response()->json(['data' => $category, 'message' => 'Mise à jour effectuée avec succès'], 200);
     }
 
     /**
@@ -136,6 +136,6 @@ class CategoryController extends Controller
 
         $category->delete();
 
-        return response()->json(['message' => 'Deleted successfully'], 200);
+        return response()->json(['message' => 'Suppression effectuée avec succès'], 200);
     }
 }

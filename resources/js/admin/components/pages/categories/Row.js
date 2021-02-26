@@ -37,7 +37,7 @@ class Row extends Component {
                 </td>
 
                 <td>
-                    
+
                     <Link to={'/categories/edit/' + this.props.category.id} className="btn btn-info btn-sm">
                         <i className="fas fa-pencil-alt">
                         </i>

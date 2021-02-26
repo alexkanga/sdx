@@ -21,12 +21,13 @@ class Form extends Component
 
                 <div>
                     <div className={`form-group ${this.props.categories.validation_errors!=null?'has-error':''}`}>
-                        <label>Category title</label>
-                        <input type="text" className="form-control" placeholder="Category title" onChange={this.props.onchange} value={this.props.categories.category.title?this.props.categories.category.title:''} name="title" />
-                        {
-                            this.props.categories.validation_errors!=null?(<div className="help-block">{this.props.categories.validation_errors.title[0]}</div>):null
-                        }
+                    <label htmlFor="titre_categorie">Titre</label>
+                    <input type="text" id="titre_categorie" className="form-control" placeholder="Libellé de la catégorie" onChange={this.props.onchange} value={this.props.categories.category.title?this.props.categories.category.title:''} name="title" />
+                    {
+                        this.props.categories.validation_errors!=null?(<div className="help-block">{this.props.categories.validation_errors.title[0]}</div>):null
+                    }
                     </div>
+
                 </div>
 
             </div>

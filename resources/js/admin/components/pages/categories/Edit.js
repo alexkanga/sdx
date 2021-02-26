@@ -67,28 +67,48 @@ class Edit extends Component
     </div>
   </div>
 
-                <section className="content">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="box box-warning">
-                                <div className="box-header with-border">
-                                    <h3 className="box-title">Edit category #{ this.props.match.params.id }</h3>
 
-                                    <Link to='/categories' className="btn btn-warning btn-sm"><i className="fa fa-arrow-left"></i> Return back</Link>
-                                </div>
-                                <form role="form" method="post" onSubmit={this.handleSubmit}>
+                  <section className="content">
+                  <form role="form" method="post" onSubmit={this.handleSubmit}>
+                  <div className="row">
+                    <div className="col-md-12">
+                    <div className="card card-primary">
+                    <div className="card-header">
+                    <h3 className="card-title">Editer une categorie #{ this.props.match.params.id }</h3>
 
-                                    <div className="box-body">
-                                        <CategoryForm categories={this.props.categories} onchange={this.handleChange}/>
-                                    </div>
-                                    <div className="box-footer">
-                                        <button type="submit" className="btn btn-success">Update</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                    <div className="card-tools">
+                    <button type="button" className="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i className="fas fa-minus"></i>
+                    </button>
                     </div>
-                </section>
+                    </div>
+
+                        <div className="card-body">
+
+                          <CategoryForm categories={this.props.categories} onchange={this.handleChange}/>
+
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                  </div>
+                    <div className="row">
+                    <div className="col-12">
+
+                    <button type="submit" className="btn btn-success ">Valider</button>
+                    <Link to='/categories' className="btn btn-warning float-right">Annuler</Link>
+                    </div>
+                    </div>
+                    </form>
+                  </section>
+
+
+
+
+
+
             </div>
         );
     }
